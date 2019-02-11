@@ -2,6 +2,12 @@
 
   ## TAKE ME OUT  
 
+   </br>
+  <p align="center">
+  <img src="https://media.giphy.com/media/QtuuT23dF9KIU/giphy.gif">
+  </p>
+  </br>
+
   <h2>Présentation</h2>
 
 ## Bienvenue dans les prémices de l'appli Take Me Out 
@@ -28,7 +34,7 @@
   <li><ul>rails console</ul></li>
   <li><ul>User.create(first_name:"Tonprénom", last_name:"Tonnom", "email:"tonprénombizarre@yopmail.com")</ul></li>
   <li><ul>Attendance.new(event_id: 1..10, attendee_id: 'l'id de ton user(5 normalement)')</ul></li>
-  <li><ul>Consulte la boîte mail `tonprénombizarre` sur le site `yopmail.com'</ul></li>
+  <li><ul>Consulte la boîte mail 'tonprénombizarre' sur le site 'yopmail.com'</ul></li>
   </br>
   <p align="center">
   <img src="https://media.giphy.com/media/UwrdbvJz1CNck/giphy.gif">
