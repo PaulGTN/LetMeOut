@@ -7,9 +7,11 @@
 ## Bienvenue dans les prémices de l'appli Take Me Out 
 
 <center><p>Dans ce repor tu trouveras :</p></center>
+<li>
 <ul>des models (User, Event, Attendance)</ul>
 <ul>les migrates et les spec correspondants</ul>
-<ul>un User Mailer et un Attendance Mailer (avec des views) pour envoyer automatiquement des mails lors de la création d'un utilisateur et lorsqu'il rejoint un évènement</ul> 
+<ul>un User Mailer et un Attendance Mailer (avec des views) pour envoyer automatiquement des mails lors de la création d'un utilisateur et lorsqu'il rejoint un évènement</ul>
+</li> 
 
   <h2>La marche à suivre</h2>
 
