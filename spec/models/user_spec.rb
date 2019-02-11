@@ -30,7 +30,7 @@ RSpec.describe User, type: :model do
     end
 
   end
-
+=begin
   context "associations" do
 
     describe "events" do
@@ -38,7 +38,7 @@ RSpec.describe User, type: :model do
     end
 
   end
-=begin
+
   context "public instance methods" do
 
     describe "#full_name" do
