@@ -33,7 +33,10 @@
   <center><h3>Pour tester les mails :</h3></center>
   <li><ul>rails console</ul></li>
   <li><ul>User.create(first_name:"Tonprénom", last_name:"Tonnom", "email:"tonprénombizarre@yopmail.com")</ul></li>
-  <li><ul>Attendance.new(event_id: 1..10, attendee_id: 'l'id de ton user(5 normalement)')</ul></li>
+  <li><ul>event = Event.find(1 à 10)</ul></li>
+  <li><ul>event.admin_id = l'id de ton user (5 normalement)</ul><li>
+  <li><ul>event.save</ul></li>
+  <li><ul>Attendance.create(event_id: l'id de ton event, attendee_id: 1 à 4)</ul></li>
   <li><ul>Consulte la boîte mail 'tonprénombizarre' sur le site 'yopmail.com'</ul></li>
   </br>
   <p align="center">
