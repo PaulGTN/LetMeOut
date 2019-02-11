@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Event, type: :model do
 
-  efore(:each) do 
+  before(:each) do 
     @event = FactoryBot.create(:event)    
   end
 
