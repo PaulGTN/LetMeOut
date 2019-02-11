@@ -29,7 +29,7 @@
   <li><ul>User.create(first_name:"Tonprénom", last_name:"Tonnom", "email:"tonprénombizarre@yopmail.com")</ul></li>
   <li><ul>Attendance.new(event_id: 1..10, attendee_id: 'l'id de ton user(5 normalement)')</ul></li>
   <li><ul>Consulte la boîte mail `tonprénombizarre` sur le site `yopmail.com'</ul></li>
-
-  <img align="center" src="https://media.giphy.com/media/UwrdbvJz1CNck/giphy.gif">
-
+  <p align="center">
+  <img src="https://media.giphy.com/media/UwrdbvJz1CNck/giphy.gif">
+  </p>
   <center><p>Et voilà, normalement je n'ai rien oublié, bonne corrections !</p><center>
