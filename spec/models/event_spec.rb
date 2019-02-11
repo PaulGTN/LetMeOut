@@ -19,7 +19,6 @@ RSpec.describe Event, type: :model do
 
     describe "#start_date" do
       it { expect(@event).to validate_presence_of(:start_date) }
-      #it { expect(@event.start_date).to be (> Time.now) }
     end
 
     describe "#duration" do
@@ -46,21 +45,13 @@ RSpec.describe Event, type: :model do
   end
 
   context "associations" do
-
-    describe "admin" do
-      it { expect(@event).to belong_to(:admin) }
-    end
-
+      it { should belong_to(:admin).class_name("User") }
+      it { should have_many(:attendances) }
+      # it { should have_many(:attendees).class_name("User").through(:attendances) }
   end
 
   context "public instance methods" do
 
-    describe "#duration" do
-      it { should belong_to(:admin).class_name("User") }
-      it { should have_many(:attendances) }
-      it { should have_many(:attendees).class_name("User").through(:attendances)}
-    end 
-    
     describe "#price" do
     it { expect(@event.price).to be_a(Integer) }
     end

@@ -1,8 +1,9 @@
 FactoryBot.define do
   factory :user do
-    description { Faker::Community.quotes }
+    description { Faker::Lorem.paragraph(20) }
     first_name { Faker::Name.first_name }
     last_name { Faker::Name.last_name }
-    #event { FactoryBot.create(:event) } 
+    email { Faker::Internet.email }
+    
   end
 end

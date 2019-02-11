@@ -4,7 +4,7 @@ class Event < ApplicationRecord
   has_many :users, foreign_key:'attendee_id'
   validates :start_date, presence: true 
   #validates :not_in_the_past
-  validates :duration, presence: true, numericality: {only_integer: true}
+  validates :duration, presence: true, numericality: { greater_than: 0, only_integer: true}
   #validates :multiple_of_5
   validates :title, presence: true, length: {in: 5..140}
   validates :description, presence: true,  length: {in: 20..1000}
