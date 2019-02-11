@@ -23,3 +23,5 @@ RSpec.describe Attendance, type: :model do
     end
 
   end
+  
+end
