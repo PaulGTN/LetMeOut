@@ -19,10 +19,13 @@ RSpec.describe Event, type: :model do
 
     describe "#start_date" do
       it { expect(@event).to validate_presence_of(:start_date) }
+      #it { expect(@event.start_date).to be (> Time.now) }
     end
 
     describe "#duration" do
       it { expect(@event).to validate_presence_of(:duration) }
+      it { expect(@event.duration % 5).to be (0) }
+      it { is_expected.to_not allow_value(-5).for(:duration) }
     end
 
     describe "#title" do
@@ -40,13 +43,12 @@ RSpec.describe Event, type: :model do
     describe "#location" do
       it { expect(@event).to validate_presence_of(:location) }
     end
-
   end
 
   context "associations" do
 
-    describe "user" do
-      it { expect(@event).to belong_to(:user) }
+    describe "admin" do
+      it { expect(@event).to belong_to(:admin) }
     end
 
   end
@@ -54,13 +56,15 @@ RSpec.describe Event, type: :model do
   context "public instance methods" do
 
     describe "#duration" do
-      it { expect(@event.duration).to be_a(Integer) }
+      it { should belong_to(:admin).class_name("User") }
+      it { should have_many(:attendances) }
+      it { should have_many(:attendees).class_name("User").through(:attendances)}
     end 
     
     describe "#price" do
     it { expect(@event.price).to be_a(Integer) }
     end
-     
+
   end 
 
 end

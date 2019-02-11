@@ -14,8 +14,8 @@ RSpec.describe Attendance, type: :model do
   
   context "associations" do
 
-    describe "user" do
-      it { expect(@attendance).to belong_to(:user) }
+    describe "attendee" do
+      it { expect(@attendance).to belong_to(:attendee) }
     end
 
     describe "event" do

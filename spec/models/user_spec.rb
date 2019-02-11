@@ -34,26 +34,10 @@ RSpec.describe User, type: :model do
   context "associations" do
 
     describe "events" do
-      it { expect(@user).to have_many(:events) }
+      it { expect(@user).to have_many(:events).with_foreign_key(:admin_id) }
+      it { expect(@user).to have_many(:attendances).with_foreign_key(:attendee_id) }
     end
 
   end
-=begin
-  context "public instance methods" do
 
-    describe "#full_name" do
-
-      it "should return a string" do
-        expect(@user.full_name).to be_a(String)
-      end
-
-      it "should return the full name" do
-        expect(@user.full_name).to eq("John Doe")
-        user_2 = create(:user, first_name: "Jean-Michel", last_name: "Durant")
-        expect(user_2.full_name).to eq("Jean-Michel Durant")
-      end
-    end
-
-  end
-=end 
 end

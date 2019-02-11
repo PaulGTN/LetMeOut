@@ -6,6 +6,6 @@ FactoryBot.define do
     description { Faker::BojackHorseman.quote }
     price { 500 }
     location { Faker::Address.city }
-    user { FactoryBot.create(:user) }    
+    admin { FactoryBot.create(:user) }    
   end
 end
