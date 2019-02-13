@@ -6,15 +6,15 @@ class AttendancesController < ApplicationController
   end
 
   def index
-    @attendances = Attendance.all 
     @event = Event.find(params[:event_id])
+    @attendances = Attendance.find(params[:event_id])
   end
   
   def create
     @event = Event.find(params[:event_id])
     @user = current_user
 
-    @amount = @event.price
+    @amount = @event.price * 100
 
     customer = Stripe::Customer.create(
       :email => params[:stripeEmail],
@@ -32,7 +32,10 @@ class AttendancesController < ApplicationController
     
     if a.save 
       flash[:success] = "Votre participation à l'évènement a été enregistrée"
-      redirect_to event_path@event
+      redirect_to event_path @event
+    else 
+      flash[:danger] = "Connecte toi pour rejoindre un évènement"
+      redirect_to event_path @event
     end
 
     rescue Stripe::CardError => e
