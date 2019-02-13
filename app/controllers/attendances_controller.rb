@@ -45,14 +45,3 @@ class AttendancesController < ApplicationController
   end
 
 end
-=begin
-  if 
-    @event.attendees.include? current_user
-    flash[:error] = "Vous participez déjà à l'évènement"
-    redirect_to @event
-    end
-
-    @event.attendees << current_user
-    flash[:success] = "Vous avez rejoint l'évènement"
-    redirect_to @event
-=end 
