@@ -10,34 +10,31 @@
 
   <h2>Présentation</h2>
 
-## Bienvenue dans les prémices de l'appli Take Me Out 
+## Bienvenue dans les prémices de l'appli Take Me Out Partie 2
 
 <center><h4>Dans ce repo tu trouveras :</h4></center>
-<li>
-<ul>des models (User, Event, Attendance)</ul></li>
-<li><ul>les migrates et les spec correspondants</ul></li>
-<li><ul>un User Mailer et un Attendance Mailer (avec des views) pour envoyer automatiquement des mails lors de la création d'un utilisateur et lorsqu'il rejoint un évènement</ul>
-</li> 
+<li><ul>Un MVC bien fait</ul></li>
+<li><ul>Une appli qui fonctionne en local et sur heroku</ul></li>
 
   <h2>La marche à suivre</h2>
 
-  <p align="center"><h4>Pour que tout se passe correctement tu dois faire:</h4></p>
-  <li><ul>git clone monrepo</ul></li>
-  <li><ul>bundle install</ul></li>
-  <li><ul>rails db:create</ul></li>
-  <li><ul>rails db:migrate</ul></li>
-  <li><ul>rails db:seed</ul></li>
+  <p align="center"><h4>Ce qui marche</h4></p>
+  <li><ul>l'appli en prod</ul></li>
+  <li><ul>toutes les pages demandées</ul></li>
+  <li><ul>le paiement via stripe</ul></li>
+  <li><ul>le mailer automatique</ul></li>
+  <li><ul>pour plus de clarté modifie directement ton profil après avoir créé un user pour lui ajouter un nom et prénom</ul></li>
 
-  <center><h4>Les tests se lancent avec un simple 'rspec' à la racine du dossier</h4></center>
+  <center><h4></h4></center>
 
-  <center><h3>Pour tester les mails :</h3></center>
-  <li><ul>rails console</ul></li>
-  <li><ul>User.create(first_name:"Tonprénom", last_name:"Tonnom", "email:"tonprénombizarre@yopmail.com")</ul></li>
-  <li><ul>event = Event.find(1 à 10)</ul></li>
-  <li><ul>event.admin_id = l'id de ton user (5 normalement)</ul></li>
-  <li><ul>event.save</ul></li>
-  <li><ul>Attendance.create(event_id: l'id de ton event, attendee_id: 1 à 4)</ul></li>
-  <li><ul>Consulte la boîte mail 'tonprénombizarre' sur le site 'yopmail.com'</ul></li>
+  <center><h3>Les choses qui ne marchent pas ou pas comme il faut :</h3></center>
+  <li><ul>la création d'utilisateur ou je n'arrive pas à rajouter les champs nom et prénom et qui me fait buguer une partie de mes tests vu que je ne plus faire des "validates: first_name, presence: true" du coup</ul></li>
+  <li><ul>les tests d'aujourd'hui et hier ne sont pas fait, c'est chiant mais les journées ne font que 24h</ul></li>
+  <li><ul>l'impossibilité de retrouver comment pusher fausse database sur heroku pour avoir déjà des events/user/attendances de créés</ul></li>
+  <li><ul>l'heure qui ne s'affiche pas correctemnt sur l'évènement (heure + nombre de minutes au lieu de hh/mm)</ul></li>
+  <li><ul>les flashs de devise que je ne trouve pas</ul></li>
+  <li><ul>fallait faire une task ?(je n'ai pas compris la pertinence de ce passage aujoud'hui)</ul></li>
+  <li><ul>le bonus (encore une fois pas le temps)</ul></li>
   </br>
   <p align="center">
   <img src="https://media.giphy.com/media/UwrdbvJz1CNck/giphy.gif">
