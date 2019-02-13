@@ -7,7 +7,7 @@ class AttendancesController < ApplicationController
 
   def index
     @event = Event.find(params[:event_id])
-    @attendances = Attendance.find(params[:event_id])
+    @attendees = @event.attendees
   end
   
   def create
