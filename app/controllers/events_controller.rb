@@ -3,8 +3,9 @@ class EventsController < ApplicationController
   before_action :authenticate_user!, only: [:new ,:create, :destroy, :udpate]
 
   def show
-   @event=Event.find(params[:id])
-   @attendees=@event.attendances.count
+    @event=Event.find(params[:id])
+    @attendees=@event.attendances
+    @user=current_user
   end
 
   def index
@@ -12,6 +13,8 @@ class EventsController < ApplicationController
   end
 
   def new
+    @event = Event.new
+    @user_id = current_user.id
   end
 
   def create
@@ -68,4 +71,20 @@ class EventsController < ApplicationController
   def update
   end
 
+  private 
+  def owner
+    if current_user != User.find(params[:id])
+      flash[:danger] = "Tu ne peux pas accéder aux autres profils"
+    end
+  end 
+
+  private
+  def authenticate_user
+    unless current_user
+      flash[:danger] = "Tu dois être connecté pour accéder à ce contenu"
+      redirect_to user_session_path
+    end
+  end
+  
 end
+

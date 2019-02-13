@@ -1,23 +1,20 @@
-<div style="border: 1px solid #e3e3e3; margin-top: 20px; padding: 10px;"class="col-9 offset-2">
+<div style="border: 2px solid #e3e3e3; margin-top: 20px; padding: 10px;"class="col-9 offset-2">
 <h1> <%=@event.title%></h1>
 <h3><%=@event.description%></h3>
 <br>
 <p>Date :<span style="color:#2b84ee" ><%=@event.start_date.year%>/<%=@event.start_date.month%>/<%=@event.start_date.day%> <span></p>
-<p>Starting at :  <span style="color:#2b84ee" ><%=@event.start_date.hour%>:<%=@event.start_date.min%></span></p>
-<p>Duration : <span style="color:#2b84ee" > <%=@event.duration%> mins</span></p>
+<p>Démarre le:  <span style="color:#2b84ee" ><%=@event.start_date.hour%>:<%=@event.start_date.min%></span></p>
+<p>Durée : <span style="color:#2b84ee" > <%=@event.duration%> mins</span></p>
 <br>
+<p>Crée par :<span style="color:#2b84ee" > <%=@event.admin.first_name%></span> | Prix :<span style="color:#2b84ee" >  <%=@event.price%></span></p>
+<p>Lieu : <span style="color:#2b84ee" ><%=@event.location%></span></p>
+<p>Nombre de participants :<span style="color:#2b84ee" > <%=@event.attendees.count%></span></p>
 
-
-<p>Host :<span style="color:#2b84ee" > <%=@event.admin.first_name%></span> | Price :<span style="color:#2b84ee" >  <%=@event.price%></span></p>
-
-
-<p>Location : <span style="color:#2b84ee" ><%=@event.location%></span></p>
-
-
-<p>Attending :<span style="color:#2b84ee" > <%=@attendees%></span></p>
-<%= link_to "Rejoindre l'évènement", new_attendance_path, class: "btn btn-info" %>
-<%= if current_user = @event.admin %>
-<%= button_to  "Mon espace évènement", index_attendance_path, class: "btn btn-info" %>
+<% if @event.admin == current_user %>
+<%= link_to  "Mon espace évènement", event_attendances_path(@event), class: "btn btn-info" %>
+<% elsif  @event.attendees.include? current_user %>
+<% else current_user != @event.admin %>
+<%= link_to "Rejoindre l'évènement", new_event_attendance_path(@event), class: "btn btn-info" %>
 <% end %>
 
 </div>

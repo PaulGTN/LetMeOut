@@ -9,7 +9,7 @@ Attendance.destroy_all
 end
 
 10.times do 
-  event = Event.create!(start_date: Faker::Date.forward(10), duration: 75, title: Faker::StarWars.call_sign, description: Faker::BojackHorseman.quote, price: 500, location: Faker::Address.city, admin_id: User.all.ids.sample)
+  event = Event.create!(start_date: Faker::Date.forward(10), duration: 75, title: Faker::StarWars.call_sign, description: Faker::BojackHorseman.quote, price: 10, location: Faker::Address.city, admin_id: User.all.ids.sample)
 end
 
 30.times do
