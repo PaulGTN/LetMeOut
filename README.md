@@ -32,9 +32,6 @@
   <center><h3>Les choses qui ne marchent pas, ou pas comme il faut :</h3></center>
   <li><ul>La création d'utilisateur où je n'arrive pas à rajouter les champs nom et prénom ce qui me fait buguer une partie de mes tests vu que je ne plus faire des "validates: first_name, presence: true"</ul></li>
   <li><ul>Les tests d'aujourd'hui et hier ne sont pas faits. c'est chiant mais les journées ne font que 24h</ul></li>
-  <li><ul>L'impossibilité de retrouver comment pusher ma fausse database sur heroku pour avoir déjà des events/user/attendances de créés</ul></li>
-  <li><ul>L'heure qui ne s'affiche pas correctemnt sur l'évènement (heure + nombre de minutes au lieu de hh/mm)</ul></li>
-  <li><ul>Les flashs de devise que je ne trouve pas</ul></li>
   <li><ul>Fallait faire une task ?(je n'ai pas compris la pertinence de ce passage aujourd'hui)</ul></li>
   <li><ul>Le bonus (encore une fois pas le temps)</ul></li>
   </br>
