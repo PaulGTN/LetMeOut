@@ -1,0 +1,28 @@
+<div style="text-align:center"class="jumbotron">
+  <h1 class="display-4">Les évènements à venir </h1>
+  <p class="lead">Ne manque aucuns des évènements dans ta ville !</p>
+  <hr class="my-4">     
+   
+  <p>Si tu as des propositions, c'est par là ↓↓↓</p>
+  <p> <%= link_to "Créer un évènement", new_event_path, class:"btn btn-primary" %></p>
+</div>
+
+<div class="row">
+
+	<%@events.each do |event|%>
+	<div class="col-sm-4">            
+	    <div class="card" style="margin-bottom:10px">
+        <img src="https://picsum.photos/200/300/?random" class="card-img-top">
+	      <div class="card-body">
+	        <h5 class="card-title"><%=event.title%> </h5>
+
+	        <p class="card-text"><%= event.description.first(80) %></p>
+	        <p class="card-text">Date : <%=event.start_date%> |  Duration : <%=event.duration%></p>
+          <p class="card-text"><small class="text-muted">Mis à jour le :<%=event.created_at%></small></p>
+	 		<%= link_to "Détails", event_path(event), class:"btn btn-primary" %>
+	    </div>
+	  </div>	  
+	 
+	</div>
+	<%end%>
+</div>

@@ -1,0 +1,62 @@
+.bg {
+  border-radius: 5px;
+  background-color: #601111;
+ /* font-family: 'Noto Sans KR', sans-serif; */
+}
+
+.navbar-brand {
+  /* font-family:'Permanent Marker', cursive; */
+  color: white;
+}
+
+.form-inline {
+  border-radius: 20px;
+}
+
+.form-control {
+  border-radius: 20px;
+}
+
+footer {
+  position:  absolute;
+  display: flex;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #601111;
+  /* font-family:'Permanent Marker', cursive; */
+  justify-content: start;
+  align-items: space-between;
+  align-content: center;
+}
+
+.btn-primary {
+  background-color: #601111;
+  border-radius: 20px;
+}
+
+form.container {
+  border: 2px;
+  border-color: #601111;
+}
+
+.form-control {
+  border-radius: 20px;
+  border-color: #601111;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family:'Permanent Marker', cursive;
+}
+
+.banner-container-lg {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.container {
+  /* font-family: 'Noto Sans KR', Arial, Helvetica, sans-serif; */
+  border-radius: 5px;
+  border-color: #601111;
+  border: 2px;
+}
